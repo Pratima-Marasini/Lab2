@@ -1,0 +1,42 @@
+package Problem3;
+
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class Main {
+	static int num = 50;
+	public static void main(String[] args) {	
+		JFrame f = new JFrame("Problem 3");
+		JButton increase = new JButton("+");
+		JButton decrease = new JButton("-");
+		JLabel label = new JLabel(num + "");
+		
+		label.setHorizontalAlignment(JLabel.CENTER);
+
+		increase.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				num++;
+				label.setText(num + "");
+			}
+		});
+		
+		decrease.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				num--;
+				label.setText(num + "");
+			}
+		});
+		
+		f.add(decrease);
+		f.add(label);
+		f.add(increase);
+		
+		f.setLayout(new GridLayout(1, 3));
+		f.setSize(400, 200);
+		f.setVisible(true);
+	}
