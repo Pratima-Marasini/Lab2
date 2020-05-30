@@ -1,0 +1,10 @@
+package Problem1;
+
+public class Java extends Engineer {
+	public Java() {
+		super();
+		title = "Java";
+		number = 10;
+		description = "Description10";
+	}
+}
